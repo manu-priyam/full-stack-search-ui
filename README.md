@@ -16,8 +16,6 @@ Tables:
 * technologies — Master table of technology details (name, category, description, links, public company info).
 * technology_subcategories — Stores finer-grained subcategories of technologies, linked to technologies.
 
-For advanced filtering (e.g., “companies using >2 technologies in Advertising”), tech category counts could be precomputed into a separate table for performance. However, given the relatively small dataset—923 distinct technologies in techData and only 111 with category details in technologies—the counts are computed dynamically at query time.
-
 ## Workflow
 
 1. Filter Application/Queries/Persistence with localStorage:
@@ -30,11 +28,7 @@ For advanced filtering (e.g., “companies using >2 technologies in Advertising�
 - OR mode → e.g., “Find companies using Shopify or Stripe but not Intercom” → Include (Any) Shopify + Stripe, Exclude Intercom. 
 Select Any for the included techs mode to achieve this.
 
-* Category counts → e.g., “Companies using >2 techs in Advertising and >3 in Analytics” → add both conditions with toggle = And. Similarly, toggle = Any for OR.
-This flexible system allows queries like:
-Travel companies in the UK.
-Any company with >2 Advertising technologies.
-Metadata + Tech combos (domain, category, HQ country + included/excluded technologies).
+* Category counts → e.g., “Companies using >2 techs in Advertising and >3 in Analytics” → add both conditions with toggle = And. Similarly, toggle = Any for OR. This is how, Metadata + Tech combos (domain, category, HQ country + included/excluded technologies) queries are supported.
 
 * Flow - User selects filters → Filters saved in localStorage → Clear Filters button appears → UI builds a structured search object → Sent to backend for query execution.
 
