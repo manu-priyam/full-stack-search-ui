@@ -3,8 +3,8 @@ This project is a full-stack web application built with Next.js (App Router) tha
 
 On the frontend, filters are organized into collapsible sections within an adjustable-width sidebar, enhanced with typeahead functionality for quick filter selection. The UI uses lucide-react icons and is styled with Tailwind CSS. Filters persist in localStorage, so they are restored on reload with relevant sections expanded, and users can reset everything with a Clear Filters button. Results are displayed in a sortable, paginated table built with shadcn/ui, with options to export to CSV or JSON and a dropdown to select visible columns. This design ensures a responsive, user-friendly UI with filtering, validation, persistence, and reset functionality.
 
-![Search UI Demo-1](/public/assets/Search UI Demo-1.png)
-![Search UI Demo-2](/public/assets/Search UI Demo-2.png)
+![Search UI Demo-1](/assets/Search UI Demo-1.png)
+![Search UI Demo-2](/assets/Search UI Demo-2.png)
 
 ## Data Modeling
 
